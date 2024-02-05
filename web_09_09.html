@@ -1,0 +1,26 @@
+<!-- Write a JavaScript function to calculate the sum of values in an array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of array</title>
+</head>
+<body>
+    <script>
+        let array = [5, -4, 15, 25, 10, 1, 9, 12, 6]
+
+        function SumArray(array){
+            let sum  = 0
+            for (let index = 0; index < array.length; index++) {
+                sum = sum + array[index]
+            }
+            return sum
+        }
+
+        let sumfirst = SumArray(array)
+        document.write(sumfirst)
+    </script>
+</body>
+</html>

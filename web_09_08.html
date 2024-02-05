@@ -1,0 +1,27 @@
+<!-- Write a JavaScript function to find the lowest value in an array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowest Value Array</title>
+</head>
+<body>
+    <script>
+        let array = [5, 4, 15, 25, 10, 1, 9, 12, 6]
+
+        function Lowest(array) {
+            let minvalue = array[0]
+            for (let index = 1; index < array.length; index++) {
+                if (array[index] < minvalue) {
+                    minvalue = array[index]
+                }
+            }
+            return minvalue
+        }
+        let values = Lowest(array)
+        document.write(values)
+    </script>
+</body>
+</html>

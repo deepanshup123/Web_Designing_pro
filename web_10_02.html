@@ -1,0 +1,67 @@
+<!-- Create a User Registration form with the following fields (name, age, location, email, password & confirm password). You need to perform the validation in JavaScript
+     and once the form passes all validation alert the data in the fields. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <form action="get">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="Name" required>
+            <br>
+            <br>
+            <label for="age">Age :</label>
+            <input type="number" name="Age" id="age" required>
+            <br>
+            <br>
+            <label for="location">Location :</label>
+            <input type="text" name="Location" id="location" required>
+            <br>
+            <br>
+            <label for="email">Email :</label>
+            <input type="text" name="Email" id="email" required>
+            <br>
+            <br>
+            <label for="password">Password :</label>
+            <input type="password" name="Password" id="password" required>
+            <br>
+            <br>
+            <label for="cPassword">Confirm Password :</label>
+            <input type="password" name="CPassword" id="cPassword" required>
+            <br><br>
+            <button type="button" id="bts">Submit</button>
+        </form>
+
+        <script>
+            let bts = document.getElementById("bts")
+
+            bts.addEventListener("click", function(){
+                let name = document.getElementById("name").value
+                let age = document.getElementById("age").value
+                let location = document.getElementById("location").value
+                let email = document.getElementById("email").value
+                let password = document.getElementById("password").value
+                let cPassword = document.getElementById("cPassword").value
+
+                if (!name || !age || !location || !email || !password || !cPassword) {
+                    alert("Please Fill the All Required Filled")
+                    return
+                }
+
+                if (password != cPassword) {
+                    alert("Password Not Matched Please Enter Password")
+                    document.getElementById("password").value = ""
+                    document.getElementById("cPassword").value = ""
+                    return
+                }
+
+                let msg =`name : ${name} <br> age : ${age} <br> location : ${location} <br> email : ${email}`
+                document.write(msg)
+            })
+        </script>
+    </body>
+    </html>

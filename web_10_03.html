@@ -1,0 +1,33 @@
+<!-- Write javascript code for displaying the below output
+
+Hint: when we click on submit button text will be changed in italic form -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italic</title>
+</head>
+<body>
+    <h1>Hello World :) :)</h1>
+    <p>Click the foolowing button to see the efect</p>
+
+    <p id="text">Welcome to the JavaScript with Deepanshu.</p>
+    <button type="button" id="bts">Effect</button>
+
+    <script>
+        let bts = document.getElementById("bts")
+        bts.addEventListener('click', function(){
+            let text = document.getElementById('text')
+            
+            if(text.style.fontStyle == "italic"){
+                text.style.fontStyle = 'normal'
+                console.log("hii");
+            }else{
+                text.style.fontStyle = 'italic'
+            }
+        })
+    </script>
+</body>
+</html>

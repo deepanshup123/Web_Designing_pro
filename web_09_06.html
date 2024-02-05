@@ -1,0 +1,35 @@
+<!-- Write a JavaScript program to sort the items of an array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        function sortArray(array){
+            if (Array.isArray(array) == false) {
+                return "please give the Array for sorting"
+            }
+            for (let index = 0; index < array.length; index++) {
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] > array[i + 1]) {
+                        let temp = array[i]
+                        array[i] = array[i + 1]
+                        array[i + 1] = temp
+                    }
+
+                }
+            }
+
+            return array
+
+        }
+
+        let arrays = [4, 6, 8, 2, 1, 15, 8, 6, 14]
+        document.write(sortArray(arrays))
+    </script>
+</body>
+</html>

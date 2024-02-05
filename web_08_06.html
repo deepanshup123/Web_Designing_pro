@@ -1,0 +1,26 @@
+<!-- Write a function to find area of circle using parametrized function. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <script>
+        function CircleArea(radius) {
+            if (typeof(radius) != "number") {
+                return `${radius} is not a number <br>`
+            }
+            let area = (Math.PI * Math.pow(radius, 2)).toFixed(2)
+            return `Area of Circle is ${area} <br>`
+        }
+
+        let firstcircle = CircleArea(5)
+        document.write(firstcircle)
+        let secondcircle = CircleArea("k")
+        document.write(secondcircle)
+    </script>
+</body>
+</html>

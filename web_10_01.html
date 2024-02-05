@@ -1,0 +1,34 @@
+<!-- Write code to change background color and content of a element when mouse over happens -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On MOuse Over</title>
+    <style>
+        #text{
+            background-color: aqua;
+            color: black;
+            width: 350px;
+            height: 150px;
+            font-size: larger;
+            text-align: center;
+            padding-top: 75px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">
+        Hello, Deepanshu
+    </p>
+
+    <script>
+        let text = document.getElementById("text")
+        text.addEventListener('mouseover', function() {
+            text.style.backgroundColor = "greenyellow"
+            text.style.color = "red"
+        })
+    </script>
+</body>
+</html>

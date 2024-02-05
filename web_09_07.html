@@ -1,0 +1,22 @@
+<!-- Write a JavaScript function to generate a random integer -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Integer</title>
+</head>
+<body>
+    <script>
+        function Random() {
+            let random = Math.random() * 100 + 1
+            random = Math.floor(random)
+            return random
+        }
+
+        let frnd = Random()
+        document.write(frnd)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- Create a function to find area of rectangle. Consider length parameter as required and breadth parameter as optional. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<body>
+    <script>
+        function AreaRect(length, breadth = 1){
+            if (typeof(length) != 'number' || typeof(breadth) != 'number') {
+                return "invalid Argument given {Please Enter a number}"
+            }
+
+            return `Area of Rectangle is ${length * breadth} <br>`
+        }
+
+        area1 = AreaRect(15)
+        document.write(area1)
+        
+        area1 = AreaRect(10, 20)
+        document.write(area1)
+    </script>
+
+</body>
+</html>

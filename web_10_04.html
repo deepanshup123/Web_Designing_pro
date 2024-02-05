@@ -1,0 +1,38 @@
+<!-- Write a JavaScript program to calculate the volume of a sphere -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume of Sphere</title>
+</head>
+<body>
+    <p>Input the Radius Value to get the Volume of Sphere</p>
+
+    <label for="radius">Radius :</label>
+    <input type="number" name="Radius" id="radius" required>
+
+    <label for="volume">Volume : </label>
+    <input type="number" name="Volume" id="volume" value="0.00" readonly>
+
+    <br><br>
+    <button type="button" id="bts">Calculate</button>
+
+    <script>
+        let bts = document.getElementById("bts")
+        bts.addEventListener('click', function () {
+            let radius = document.getElementById("radius").value
+            let volume = document.getElementById("volume")
+
+            if (!radius) {
+                alert("please Enter the Radius??")
+                return
+            }
+            let result = ((4/3)* Math.PI * Math.pow(radius, 3)).toFixed(2)
+            volume.value = result
+
+        })
+    </script>
+</body>
+</html>

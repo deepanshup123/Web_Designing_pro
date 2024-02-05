@@ -1,0 +1,24 @@
+<!-- create a arrow function to return cube of number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+</head>
+<body>
+    <script>
+        let Cube = (n) => {
+            if (typeof(n) != "number") {
+                return `${n} is not a number <br>`
+            }
+            return `Cube of ${n} is ${n * n * n} <br>`
+        }
+
+        document.write(Cube(5))
+        document.write(Cube("k"))
+        document.write(Cube(3))
+    </script>
+</body>
+</html>

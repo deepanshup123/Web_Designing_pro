@@ -1,0 +1,37 @@
+<!-- Create object named course which has property such as course name, duration, fees and methods as enrol, cancel and discount. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Updatation</title>
+</head>
+<body>
+    <script>
+        let course = {
+            courseName : "javascript",
+            duration : "six month",
+            fees : 4999,
+
+            enrol : function(name){
+                let msg = `${name} taken the ${this.courseName} course <br>`
+                document.write(msg)
+            },
+            cancel : function(name){
+                let msg = `${name} cancel the addmission in ${this.courseName} course <br>`
+                document.write(msg)
+            },
+            discount : function(discountAmount){
+                let newFees = this.fees - discountAmount
+                let msg = `Discount of ${discountAmount} from Fees. New Fees is ${newFees} <br>`
+                document.write(msg)
+            }
+        }
+
+        course.enrol("Deepanshu Patel")
+        course.cancel("Ajay Singh")
+        course.discount(2999)
+    </script>
+</body>
+</html>

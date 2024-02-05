@@ -1,0 +1,42 @@
+<!-- Write a JavaScript program to highlight the bold words of any paragraph, on mouse over the listener.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bold Highlighter</title>
+    <style>
+        #text{
+            background-color: #dadada;
+            height:100px;
+            padding-top: 50px;
+        }
+        .highlight{
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">
+        My Name is <b>Deepanshu Patel</b>. Containg Nothing???
+    </p>
+
+    <script>
+        let text = document.getElementById('text')
+        text.addEventListener('mouseover', function(){
+            let bold = document.getElementsByTagName('b')
+            for (let index = 0; index < bold.length; index++) {
+                bold[index].setAttribute('class', 'highlight')
+            }
+        })
+        text.addEventListener('mouseout', function(){
+            let bold = document.getElementsByTagName('b')
+            for (let index = 0; index < bold.length; index++) {
+                bold[index].removeAttribute('class', 'highlight')
+            }
+        })
+    </script>
+</body>
+</html>

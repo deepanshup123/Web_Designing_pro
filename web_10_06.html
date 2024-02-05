@@ -1,0 +1,35 @@
+<!-- Use  DOM to change the value of the image's src attribute. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Source</title>
+    <style>
+        img{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="laptop.jpg" alt="images" srcset="" id="images">
+    <button type="button" id="bts">Change image</button>
+
+    <script>
+
+        let bts = document.getElementById('bts')
+        bts.addEventListener('click', function(){
+            let images = document.getElementById('images')
+            let source = images.getAttribute('src')
+            if (source == "laptop.jpg") {
+                images.setAttribute('src', 'banner.jpg')
+            }else{
+                images.setAttribute('src', 'laptop.jpg')
+            }
+        })
+
+    </script>
+</body>
+</html>

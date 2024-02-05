@@ -1,0 +1,40 @@
+<!-- 1, Create an object with another object inside
+2. Create an object containing function inside it suing short hand definition
+3. Mention any two uses of Math object -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // Create an object with another object inside
+        let details = {
+            fullName : {
+                firstName : "Deepanshu",
+                lastName : "Patel"
+            }
+        }
+
+        // Create an object containing function inside it suing short hand definition
+        let employee = {
+            name : "Deepanshu Patel",
+            id : 102485,
+            sayHello(){
+                document.write(`Welcome, ${this.name} <br>`)
+            }
+        }
+        employee.sayHello()
+
+        // Mention any two uses of Math object
+        let square = Math.pow(5, 2)
+        document.write(square+ "<br>")
+
+        let random = Math.random() * 10;
+        document.write(Math.floor(random)+ "<br>")
+    </script>
+</body>
+</html>

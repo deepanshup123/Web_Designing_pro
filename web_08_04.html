@@ -1,0 +1,23 @@
+<!-- Create an anonymous function to return square of number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square</title>
+</head>
+<body>
+    <script>
+        let square = function(n){
+            if (typeof(n) != "number"){
+                return `${n} is Not a Number`
+            }
+            return `Square of ${n} is ${n * n} <br>`
+        }
+
+        document.write(square(5))
+        document.write(square(10))
+    </script>
+</body>
+</html>

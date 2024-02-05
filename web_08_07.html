@@ -1,0 +1,31 @@
+<!-- Write  a program to create function which return count of digits which number pass as parameter? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Digits</title>
+</head>
+<body>
+    <script>
+        function CountDigit(num){
+            if (typeof(num) != 'number') {
+                return `${num} is Not A number <br>`
+            }
+            let count = 0
+            while (num > 1) {
+                num = num / 10
+                count++
+            }
+            return `count is ${count} <br>`
+        }
+
+        let first_num = CountDigit(123)
+        document.write(first_num)
+
+        let second_num = CountDigit(2546)
+        document.write(second_num)
+    </script>
+</body>
+</html>

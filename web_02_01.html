@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Sticky</title>
+    <style>
+        .area{
+            width: 100%;
+            height: 1000px;
+            border: solid 2px;
+        }
+
+        .image{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 15px;
+            right: 10px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Please scroll the page vertically</h3>
+
+    <h4>
+        Image is fixed at the position shown
+    </h4>
+
+    <p>
+        Images width is 150px and height is 150px
+        and formed to circle useing border radius
+    </p>
+
+    <p>Position of the image: from bottom 15px and from right side 10px</p>
+
+    <div class="area">
+        This is dummy box to occupy area.Instead of this dummy box
+        in your assignment you can created beautiful section.
+        This box is taken to increase vertical height.
+        you can move scroll bar up and down to see that image is fixed and
+        other content moves up and down.
+    </div>
+    <img src="banner.jpg" alt="image refrence not find" class="image">
+</body>
+</html>

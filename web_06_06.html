@@ -1,0 +1,102 @@
+<!-- Write a JavaScript program to convert meters to centimeters. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M to CM</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid gray;
+            border-radius: 7px;
+            background-color: #dadada;
+            padding-left: 10px;
+        }
+
+        input{
+            font-size: 25px;
+            height: 50px;
+            width:250px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: 1px solid gray;
+        }
+
+        .box{
+            width:auto;
+            margin-right:10px;
+            height:100px
+        }
+        .flexible{
+            height: 50px;
+            display: flex;
+            justify-content: start;
+            align-items:flex-start;
+            position: relative;
+            top: -40px
+        }
+
+        p{
+            font-size: 30px;
+        }
+
+        label{
+            display: inline-block;
+            width:100%;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(101, 99, 99);
+            padding-left: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box ">
+            <input type="number" name="Meter" id="meter" value="1">
+            <br>
+            <label for="meter">Meter</label>
+        </div>
+        <div class="box flexible">
+            <p>=</p>
+        </div>
+        <div class="box">
+            <input type="number" name="CentiMeter" id="centimeter" value="100">
+            <br>
+            <label for="centimeter">Centimeter</label>
+        </div>
+    </div>
+
+
+    <script>
+        let meter = document.getElementById("meter")
+        let centimeter = document.getElementById("centimeter")
+
+        meter.addEventListener('input', function(){
+            meterValue = meter.value
+            toValue = meterValue * 100
+            centimeter.value = toValue
+        })
+        centimeter.addEventListener('input', function(){
+            cmValue = centimeter.value
+            toValue = cmValue / 100
+            meter.value = toValue
+        })
+    </script>
+</body>
+</html>

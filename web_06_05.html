@@ -1,0 +1,48 @@
+<!-- Write JavaScript program for calculating square of user define number -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square</title>
+    <style>
+        button{
+            background-color: aqua;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        p > span{
+            font-size: 20px;
+            color: rgba(208, 10, 10, 0.822);
+        }
+    </style>
+</head>
+<body>
+    <label for="number">Enter a Number: </label>
+    <input type="number" name="Number" id="number">
+
+    <button type="button" id="result">Square</button>
+
+    <p>
+        Square Of Number: <span id="square">0</span>
+    </p>
+
+    <script>
+        let btn = document.getElementById("result")
+
+        btn.addEventListener("click", function(){
+            let number = document.getElementById("number").value
+
+            if(!number){
+                window.alert("Please Enter the Number")
+            }else{
+                let square = document.getElementById("square")
+                square.innerHTML = Math.pow(number, 2).toFixed(2)
+            }
+        })
+    </script>
+</body>
+</html>

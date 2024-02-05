@@ -1,0 +1,81 @@
+<!-- Write JavaScript program accepts 5 subject marks from the user to calculate their total and percentage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+    <style>
+        p > span{
+            font-size: 22px;
+            color: rgba(240, 8, 28, 0.801);
+        }
+
+        button{
+            border-radius: 5px;
+            background-color: aqua;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="hindi">Hindi : </label>
+        <input type="number" name="Hindi" id="hindi">
+        <br>
+        <br>
+        <label for="english">English : </label>
+        <input type="number" name="English" id="english">
+        <br>
+        <br>
+        <label for="math">Math : </label>
+        <input type="number" name="Math" id="math">
+        <br>
+        <br>
+        <label for="physics">Physics : </label>
+        <input type="number" name="Physics" id="physics">
+        <br>
+        <br>
+        <label for="chem">Chemistry : </label>
+        <input type="number" name="Chemistry" id="chem">
+
+        <button type="button" id="result">Marks & Percentage</button>
+
+        <p>
+            Your Marks is : <span id="marks">0</span> and Percentage is <span id="percentage">0</span>%
+        </p>
+    </form>
+
+    <script>
+        let result = document.getElementById("result")
+
+        function Marks(){
+            let hindi = document.getElementById("hindi").value;
+            let english = document.getElementById("english").value;
+            let math = document.getElementById("math").value;
+            let physics = document.getElementById("physics").value;
+            let chem = document.getElementById("chem").value;
+
+            if(!hindi || !english || !math || !physics || !chem){
+                window.alert("Please Fill Your Marks")
+            }else{
+                if(hindi < 0 || english < 0 || math < 0 || physics < 0 || chem < 0){
+                    window.alert("Please Give Right Marks")
+                }else{
+                    let marks = document.getElementById("marks");
+                    let percentage = document.getElementById("percentage");
+
+                    let total = Number(hindi) + Number(english) + Number(math) + Number(physics) + Number(chem)
+                    let per = (total * 100) / 500 
+
+                    marks.innerHTML = total
+                    percentage.innerHTML = per.toFixed(2)
+                }
+            }
+        }
+
+        result.addEventListener("click", Marks)
+    </script>
+</body>
+</html>

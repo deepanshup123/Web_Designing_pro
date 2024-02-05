@@ -1,0 +1,66 @@
+<!-- Write a JavaScript program to calculate simple interest.\ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple interest</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        p > span{
+            font-weight: bold;
+            color: rgb(54, 98, 232);
+        }
+    </style>
+</head>
+<body>
+    <!-- principle amount -->
+    <label for="principleAmount">Principle Amount: </label>
+    <input type="number" name="Amount" id="principleAmount">
+    <br>
+    <br>
+    <!-- rate of interest -->
+    <label for="interest">Rate Of Interest: </label>
+    <input type="number" name="Interest" id="interest">
+    <br>
+    <br>
+    <!-- time period -->
+    <label for="time">Time in Months: </label>
+    <input type="number" name="Time" id="time">
+
+    <!-- button to Get Simple Interest -->
+    <button type="button" id="result">Simple Interest</button>
+
+    <p>
+        your Simple Interest Is: <span id="simpleInterest"></span>
+    </p>
+
+    <script>
+        let btn = document.getElementById("result")
+
+        btn.addEventListener('click', function(){
+            let amount = document.getElementById("principleAmount").value
+            let interest = document.getElementById("interest").value
+            let time = document.getElementById("time").value
+
+            let simpleInterest = document.getElementById("simpleInterest")
+
+            if(!amount || !interest || !time){
+                window.alert("Please Fill the Required Field")
+            }else{
+                if(amount < 0 || interest < 0 || time < 0){
+                    window.alert("Please Give the Right Credentials")
+                }else{
+                    time = time / 12
+                    let SI = (amount * interest * time)/100
+                    simpleInterest.innerHTML = SI.toFixed(3)
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

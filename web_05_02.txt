@@ -1,0 +1,24 @@
+1. How to make a comment in JavaScript ?
+
+ANS:-> 	-> This one denoted to some text or any thing that you written in your code 
+	but dont want to be execute with the code
+	
+	There is two Types of commment in JavaScript 
+	1. Single Line Comment 
+		SYNTAX :
+		   // This is Single Line Commment
+	
+	2. Multiple Line Comment
+		SYNTAX: 
+		   /*
+			This is Multile comment
+			ok
+		   */
+		
+
+2. What different options to display output to the screen in JS?
+
+ANS:
+	1.-> document.write("First Option")
+	2.-> console.log("Second Option")
+	3.-> window.alert("Third Option")

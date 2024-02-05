@@ -1,0 +1,14 @@
+Differentiate between HTML, CSS, JavaScript.
+
+HTML :->
+	HTML stands Hyper Text Markup Language.
+	It is Used for maintane the structure of body but its not stablazied
+
+CSS :-> 
+	CSS Stands Cascading Style Sheet.
+	its is used to stye our structure to attractive the User.
+	And its maintane the sturucture in stabalized and also for responsiveness the structure for the different the Browser
+
+JAVASCRIPT :->
+	JavaScript is a engine for do any type of work on our website.
+	to perfrom the any task for more intractive the User.

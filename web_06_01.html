@@ -1,0 +1,58 @@
+<!-- Write a JavaScript program to find the area of circle. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Circle</title>
+    <style>
+        #areaOfCircle{
+            font-size: 25px;
+            font-weight: 600;
+            color: hotpink;
+        }
+        p{
+            font-size: 20px;
+        }
+
+        #result{
+            border-radius: 10px;
+            font-size: 15px;
+            background-color: aqua;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label for="radius">Enter The Radius :</label>
+    <input type="number" name="Number" id="radius">
+
+    <button type="button" id="result">Area</button>
+
+    <p> Area Of Circle Is
+        <span
+        id="areaOfCircle">
+            
+        </span>
+    </p>
+    
+    <script>
+
+        let btn = document.getElementById("result")
+
+        btn.addEventListener("click", function(){
+            let radius = document.getElementById("radius").value
+            let areaOfCircle = document.getElementById("areaOfCircle")
+            if(!radius){
+                areaOfCircle.innerHTML = 0
+            }
+            if(radius){
+                areaOfCircle.innerHTML = (Math.PI * Math.pow(radius, 2)).toFixed(3)
+            }
+        })
+
+    </script>
+</body>
+</html>

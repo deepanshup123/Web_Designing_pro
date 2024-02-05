@@ -1,0 +1,52 @@
+<!-- Write a program to check given number is Armstrong or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+<body>
+    <label for="number">Enter a Number : </label>
+    <input type="number" name="Number" id="number">
+    <button type="button" id="bts">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        let bts = document.getElementById("bts")
+
+        bts.addEventListener('click', function(){
+            let number = document.getElementById("number").value
+            number = Number(number)
+            let duplicate = number
+            let length = 0
+            let sum = 0
+            let mul = 1
+            while(number > 1){
+                number = number / 10
+                length++
+            }
+            number = duplicate
+            while(number > 0){
+                let digit
+                digit = number % 10
+                for (let i = 1; i <= length; i++) {
+                    mul = mul * digit
+                }
+                sum = sum + mul
+                number = parseInt(number/10)
+                mul = 1
+            }
+            if (sum == duplicate) {
+                let result = document.getElementById("result").
+                innerHTML = `${duplicate} is Armstrong Number`
+            }else{
+                let result = document.getElementById("result").
+                innerHTML = `${duplicate} is Not a Armstrong Number`
+            }
+        })
+    </script>
+</body>
+</html>

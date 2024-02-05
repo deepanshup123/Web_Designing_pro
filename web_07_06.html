@@ -1,0 +1,35 @@
+<!-- Write a Program to find Sum of Digits. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digits Sum</title>
+</head>
+<body>
+    <label for="number">Enter a Number : </label>
+    <input type="number" name="Number" id="number">
+    <button type="button" id="bts">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        let bts = document.getElementById("bts")
+        bts.addEventListener('click', function(){
+            let number = document.getElementById("number").value
+            number = parseInt(number)
+            let duplicate = number
+            let sum = 0
+            while (number > 0) {
+                let digit = number % 10
+                sum =sum + digit
+                number = parseInt(number / 10) 
+            }
+            let result = document.getElementById("result").
+            innerHTML = `${duplicate} sum of digit is ${sum} `
+        })
+
+    </script>
+</body>
+</html>

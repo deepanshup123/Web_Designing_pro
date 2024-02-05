@@ -1,0 +1,28 @@
+<!-- Write a javascript code to take the number from the user and display its multiplication table -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+</head>
+<body>
+    <label for="number">Enter a Number</label>
+    <input type="number" name="Number" id="number">
+    <button type="button" id="bts">Table</button>
+
+    <p id="result"></p>
+
+    <script>
+        let bts = document.getElementById("bts")
+        bts.addEventListener('click', function(){
+            let number = document.getElementById("number").value
+            let result = document.getElementById('result')
+            for (let num = 1; num <= 10; num++) {
+                result.innerHTML += `${number} * ${num} = ${number * num} <br>`
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- WAP in Javascript  to accept the age of candidate and check weather He/She is Major or minor -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major/Minor</title>
+</head>
+<body>
+    <label for="age">Enter a Age : </label>
+    <input type="number" name="Age" id="age">
+    <button type="button" id="bts">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        let bts = document.getElementById("bts")
+        bts.addEventListener('click', function(){
+            let number = document.getElementById("age").value
+            let result = document.getElementById("result")
+
+            if (number <= 0) {
+                result.innerHTML = "Please Give the Right Age"
+                return
+            }
+
+            if (number < 18) {
+                result.innerHTML = "You Are Minor"               
+            }else{
+                result.innerHTML = "You Are Major"
+            }
+
+        })
+    </script>
+</body>
+</html>

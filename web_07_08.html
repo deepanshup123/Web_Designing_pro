@@ -1,0 +1,53 @@
+<!-- WAP to accept the Day of Week in Number And print in words using switch statement.(e.g if input is 0 then Sunday so on..) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+   
+        <label for="number"> Enter a Number (0-6) : </label>
+        <input type="number" id="number" name="Number">
+        <button type="button" id="bts">Get Day</button>
+        <p id="result"></p>
+	<script>
+           let bts = document.getElementById("bts")
+           bts.addEventListener('click',function(){
+               let result = document.getElementById('result')
+               let number = document.getElementById("number").value
+               switch (parseInt(number)){
+                  case 0:
+                     result.innerHTML = "SUNDAY"
+                     break
+                  case 1:
+                     result.innerHTML = "MONDAY"
+                     break
+                  case 2:
+                     result.innerHTML = "TUESDAY"
+                     break
+                  case 3:
+                     result.innerHTML = "WEDNESDAY"
+                     break
+                  case 4:
+                     result.innerHTML = "THURSDAY"
+                     break
+                  case 5:
+                     result.innerHTML = "FRIDAY"
+                     break
+                  case 6:
+                     result.innerHTML = "SATURDAY"
+                     break
+                  default:
+                     result.innerHTML = "Please Enter a Valid Number"
+                }
+           })
+          
+        </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!-- Write a JS program to check if a given number is prime or not prime (composite). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number">Enter The Number : </label>
+    <input type="number" name="Number" id="number">
+    <button type="button" id="bts">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        let bts = document.getElementById("bts")
+        bts.addEventListener("click", function(){
+            let number = document.getElementById("number").value
+            let result = document.getElementById("result")
+
+            if(number <= 0){
+                result.innerHTML = "You Given the number is Should be Positive"
+                return
+            }
+            if(number == 1 || number == 2){
+                result.innerHTML = `${number} is Prime Number`
+            }
+
+            if(number > 2){
+                let done = 0
+                let o_number = number
+                number = Math.floor(number / 2)
+                for (let i = 2; i <= number; i++) {
+                    if (o_number % i == 0) {
+                        done++;
+                    }
+                }
+                if (done > 0) {
+                    result.innerHTML = `${o_number} is Not a Prime Number`
+                }else if(done == 0){
+                    result.innerHTML = `${o_number} is a Prime Number`
+                }
+            }else if(!number){
+                alert("invalid Input")
+            }
+        })
+    </script>
+</body>
+</html>
